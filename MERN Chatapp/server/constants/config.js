@@ -1,7 +1,7 @@
 const corsOptions = {
     origin: [
       "https://mern-meowchat.netlify.app",
-      "https://mern-meowchat.netlify.app/",
+      "http://localhost:5173",
       process.env.CLIENT_URL,
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
