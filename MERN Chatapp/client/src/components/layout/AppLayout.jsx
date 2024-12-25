@@ -26,6 +26,7 @@ import Title from "../shared/Title";
 import ChatList from "../specific/ChatList";
 import Profile from "../specific/Profile";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
@@ -137,6 +138,7 @@ const AppLayout = () => (WrappedComponent) => {
             <WrappedComponent {...props} chatId={chatId} user={user} />
           </div>
         </div>
+        <Footer></Footer>
       </div>
     );
   };

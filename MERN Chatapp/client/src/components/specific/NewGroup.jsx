@@ -68,18 +68,18 @@ const NewGroup = () => {
 
   return (
     <Dialog onClose={closeHandler} open={isNewGroup}>
-      <Stack p={{ xs: "1rem", sm: "3rem" }} width={"25rem"} spacing={"2rem"}>
-        <DialogTitle textAlign={"center"} variant="h4">
+      <div className="p-[2rem] dark:bg-[#111111]" spacing={"2rem"}>
+        <div className="text-center dark:text-white text-2xl">
           New Group
-        </DialogTitle>
+        </div>
 
-        <TextField
+        <input className="bg-transparent border-2 rounded-md w-full my-3 dark:text-white py-1 px-3"
           label="Group Name"
           value={groupName.value}
           onChange={groupName.changeHandler}
         />
 
-        <Typography variant="body1">Members</Typography>
+        <span className="dark:text-gray-500" variant="body1">Members</span>
 
         <Stack>
           {isLoading ? (
@@ -114,7 +114,7 @@ const NewGroup = () => {
             Create
           </Button>
         </Stack>
-      </Stack>
+      </div>
     </Dialog>
   );
 };

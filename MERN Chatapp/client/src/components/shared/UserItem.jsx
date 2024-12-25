@@ -23,7 +23,7 @@ const UserItem = ({
       >
         <Avatar src={transformImage(avatar)} />
 
-        <Typography
+        <div className="w-full dark:text-white"
           variant="body1"
           sx={{
             flexGlow: 1,
@@ -36,7 +36,7 @@ const UserItem = ({
           }}
         >
           {name}
-        </Typography>
+        </div>
 
         <IconButton
           size="small"

@@ -53,10 +53,9 @@ const Search = () => {
 
   return (
     <Dialog open={isSearch} onClose={searchCloseHandler}>
-      <Stack p={"2rem"} direction={"column"} width={"25rem"}>
-        <DialogTitle textAlign={"center"}>Find People</DialogTitle>
-        <TextField
-          label=""
+      <div className="p-[2rem] dark:bg-[#111111]" direction={"column"}>
+        <div className="text-center dark:text-white text-2xl" textAlign={"center"}>Find People</div>
+        <input className="bg-transparent border-2 rounded-md w-full my-3 dark:text-white py-1 px-3"
           value={search.value}
           onChange={search.changeHandler}
           variant="outlined"
@@ -80,7 +79,7 @@ const Search = () => {
             />
           ))}
         </List>
-      </Stack>
+      </div>
     </Dialog>
   );
 };

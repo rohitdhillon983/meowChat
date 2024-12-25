@@ -2,6 +2,7 @@ import toast from 'react-hot-toast';
 import Header from '../components/layout/Header'
 import React, { useState } from 'react'
 import axios from 'axios';
+import Footer from '../components/layout/Footer';
 
 const ChatWithAi = () => {
     const [input, setInput]=useState("")
@@ -61,6 +62,7 @@ const ChatWithAi = () => {
                 </form>
             </div>
         </div>
+        <Footer></Footer>
     </div>
   )
 }

@@ -84,12 +84,12 @@ const Header = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }} height={"4rem"}>
+      <Box sx={{ flexGrow: 1 }} >
         <AppBar
         className="dark:bg-[#222] fixed"
           position="static"
         >
-          <Toolbar className="flex justify-between w-[80%] mx-auto max-[425px]:w-full">
+          <Toolbar className="flex justify-between w-[80%] mx-auto max-[425px]:w-full ">
             <div className="cursor-pointer" onClick={HandleHome}>
               <img width={"110px"} className="max-[425px]:w-[50px]" src="https://1000logos.net/wp-content/uploads/2023/01/MeowChat-logo-500x281.png" alt="" />
             </div>
@@ -103,13 +103,15 @@ const Header = () => {
                 <MenuIcon />
               </IconButton>
             </Box>
+
             <Box>
               <ModeToggle />
             </Box>
-            <div className="bg-white p-1 rounded-sm cursor-pointer" onClick={handleAi}>
+            <div className="bg-white p-1 rounded-sm cursor-pointer max-[425px]:opacity-0 max-[425px]:hidden" onClick={handleAi}>
               <img className="w-7" src="https://cdn-icons-png.flaticon.com/512/12534/12534625.png" alt="" />
             </div>
-            <Box>
+
+            <div className="max-[425px]:hidden">
               <IconBtn
                 title={"Search"}
                 icon={<SearchIcon />}
@@ -150,7 +152,11 @@ const Header = () => {
                 
                 </DropdownMenuContent>
               </DropdownMenu>
-            </Box>
+            </div>
+
+            <div className="min-[426px]:hidden" onClick={logoutHandler}>
+              <LogoutIcon></LogoutIcon>
+            </div>
           </Toolbar>
         </AppBar>
       </Box>
